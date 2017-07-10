@@ -12,6 +12,8 @@ import org.springframework.util.StopWatch;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Slf4j
 public class ScheduleJob implements org.quartz.Job {
@@ -20,7 +22,6 @@ public class ScheduleJob implements org.quartz.Job {
      * 任务调度参数key
      */
     public static final String JOB_ID_KEY = "JOB_ID_KEY";
-
 
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
